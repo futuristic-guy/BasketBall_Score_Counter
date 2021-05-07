@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+  <TextView
+      android:id="@+id/team"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+
+      android:layout_marginTop="16dp"
+      android:fontFamily="sans-serif-light"
+      android:text="Team A"
+      android:textColor="#616161"
+      android:textSize="14sp"
+      android:textStyle="bold"
+      app:layout_constraintHorizontal_bias="0.20"
+      app:layout_constraintLeft_toLeftOf="parent"
+      app:layout_constraintRight_toRightOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+
+  <TextView
+      android:id="@+id/point_counter"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="16dp"
+      android:fontFamily="sans-serif-light"
+      android:text="0"
+      android:textColor="@color/black"
+      android:textSize="56sp"
+      app:layout_constraintLeft_toLeftOf="@id/team"
+      app:layout_constraintRight_toRightOf="@id/team"
+      app:layout_constraintTop_toBottomOf="@+id/team" />
+
+  <Button
+      android:id="@+id/button1"
+      android:layout_width="139dp"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="24dp"
+      android:onClick="displayThreeA"
+      android:padding="5dp"
+
+      android:text="+3 points"
+      app:layout_constraintLeft_toLeftOf="@id/point_counter"
+      app:layout_constraintRight_toRightOf="@id/point_counter"
+      app:layout_constraintTop_toBottomOf="@+id/point_counter" />
+
+
+  <Button
+      android:id="@+id/button2"
+      android:layout_width="139dp"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="16dp"
+      android:onClick="displayTwoA"
+
+      android:text="+2 points"
+      app:layout_constraintLeft_toLeftOf="@id/button1"
+      app:layout_constraintRight_toRightOf="@id/button1"
+      app:layout_constraintTop_toBottomOf="@+id/button1" />
+
+  <Button
+      android:id="@+id/button3"
+      android:layout_width="139dp"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="16dp"
+      android:onClick="displayOneA"
+
+
+      android:text="free throw"
+      app:layout_constraintLeft_toLeftOf="@id/button2"
+      app:layout_constraintRight_toRightOf="@id/button2"
+      app:layout_constraintTop_toBottomOf="@+id/button2" />
+
+
+  <TextView
+      android:id="@+id/team_b"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="16dp"
+      android:fontFamily="sans-serif-light"
+      android:text="Team B"
+      android:textColor="#616161"
+      android:textSize="14sp"
+      android:textStyle="bold"
+      app:layout_constraintHorizontal_bias="0.80"
+      app:layout_constraintLeft_toLeftOf="parent"
+      app:layout_constraintRight_toRightOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+
+  <TextView
+      android:id="@+id/point_counter_b"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="16dp"
+      android:fontFamily="sans-serif-light"
+      android:text="0"
+      android:textColor="@color/black"
+      android:textSize="56sp"
+      app:layout_constraintLeft_toLeftOf="@id/team_b"
+      app:layout_constraintRight_toRightOf="@id/team_b"
+      app:layout_constraintTop_toBottomOf="@+id/team_b" />
+
+  <Button
+      android:id="@+id/button4"
+      android:layout_width="139dp"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="24dp"
+      android:onClick="displayThreeB"
+
+      android:text="+3 points"
+      app:layout_constraintLeft_toLeftOf="@id/point_counter_b"
+      app:layout_constraintRight_toRightOf="@id/point_counter_b"
+      app:layout_constraintTop_toBottomOf="@+id/point_counter_b" />
+
+
+  <Button
+      android:id="@+id/button5"
+      android:layout_width="139dp"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="16dp"
+      android:onClick="displayTwoB"
+
+      android:text="+2 points"
+      app:layout_constraintLeft_toLeftOf="@id/button4"
+      app:layout_constraintRight_toRightOf="@id/button4"
+      app:layout_constraintTop_toBottomOf="@+id/button4" />
+
+  <Button
+      android:id="@+id/button6"
+      android:layout_width="139dp"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="16dp"
+      android:onClick="displayOneB"
+
+      android:text="free throw"
+      app:layout_constraintLeft_toLeftOf="@id/button5"
+      app:layout_constraintRight_toRightOf="@id/button5"
+      app:layout_constraintTop_toBottomOf="@+id/button5" />
+
+  <Button
+      android:id="@+id/button"
+      android:layout_width="139dp"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="32dp"
+      android:text="Reset"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      android:onClick="resetView"
+      />
+
+  <View
+      android:layout_width="1dp"
+      android:layout_height="350dp"
+      android:layout_marginTop="16dp"
+      android:background="@color/grey"
+      app:layout_constraintLeft_toLeftOf="parent"
+      app:layout_constraintRight_toRightOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+
+      />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
